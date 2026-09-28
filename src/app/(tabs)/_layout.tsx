@@ -1,5 +1,5 @@
-import { tabs } from "@constants/data"
-import { colors, components } from '@constants/theme'
+import { tabs } from "@/constants/data"
+import { colors, components } from '@/constants/theme'
 import { Tabs } from "expo-router"
 import { Image, StyleSheet, View } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
