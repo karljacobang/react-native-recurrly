@@ -1,6 +1,5 @@
 import { formatCurrency, formatSubscriptionDateTime } from '@/lib/utils'
 import clsx from 'clsx'
-import React from 'react'
 import { Image, Pressable, Text, View } from 'react-native'
 
 const SubscriptionCard = ({ name, price, currency, icon, billing, color, category, plan, renewalDate, expanded, onPress, paymentMethod, startDate }: SubscriptionCardProps) => {
@@ -29,14 +28,14 @@ const SubscriptionCard = ({ name, price, currency, icon, billing, color, categor
                         <View className='sub-row'>
                             <View className='sub-row-copy'>
                                 <Text className='sub-label'>Payment:</Text>
-                                <Text className='sub-value' numberOfLines={1} ellipsizeMode='tail'>{paymentMethod?.trim()}</Text>
+                                <Text className='sub-value' numberOfLines={1} ellipsizeMode='tail'>{paymentMethod?.trim() ?? 'Not provided'}</Text>
                             </View>
                         </View>
 
                         <View className='sub-row'>
                             <View className='sub-row-copy'>
                                 <Text className='sub-label'>Started:</Text>
-                                <Text className='sub-value' numberOfLines={1} ellipsizeMode='tail'>{startDate ? formatSubscriptionDateTime(startDate) : ''}</Text>
+                                <Text className='sub-value' numberOfLines={1} ellipsizeMode='tail'>{startDate ? formatSubscriptionDateTime(startDate) : 'Not provided'}</Text>
                             </View>
                         </View>
                     </View>
